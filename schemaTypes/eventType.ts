@@ -25,7 +25,6 @@ export const eventType = defineType({
     }),
     defineField({
       name: 'ticketsURL',
-      description: 'The page where tickets can be purchased (e.g. https://www.example.com)',
       type: 'url',
     }),
   ],
