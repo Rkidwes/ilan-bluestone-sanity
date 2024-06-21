@@ -8,6 +8,7 @@ export const slideType = defineType({
   type: 'document',
   fields: [
     defineField({
+      title: 'Headline (required)',
       name: 'headline',
       type: 'string',
       validation: (rule) => rule.required(),
@@ -31,6 +32,7 @@ export const slideType = defineType({
       },
     }),
     defineField({
+      title: 'Image (required)',
       name: 'image',
       type: 'image',
       hidden: ({document}) => document?.assetType !== 'image',
@@ -44,6 +46,7 @@ export const slideType = defineType({
         }),
     }),
     defineField({
+      title: 'Video (required)',
       name: 'video',
       type: 'file',
       hidden: ({document}) => document?.assetType !== 'video',
@@ -65,6 +68,7 @@ export const slideType = defineType({
       type: 'string',
     }),
     defineField({
+      title: 'Link URL (required)',
       name: 'linkURL',
       type: 'string',
       hidden: ({document}) => !document?.linkText,
@@ -77,9 +81,10 @@ export const slideType = defineType({
         'If false, or left unset, link from this slide will open on top of the current page. As such, external links should be set to true.',
     }),
     defineField({
+      title: 'Slide Title (required)',
       name: 'slideTitle',
       type: 'string',
-      description: 'Short description for pagination tab',
+      description: 'Short description for slider pagination tab',
       validation: (rule) => rule.required(),
     }),
   ],

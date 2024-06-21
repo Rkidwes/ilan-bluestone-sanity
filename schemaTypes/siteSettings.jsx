@@ -82,11 +82,13 @@ export const siteSettings = defineType({
       group: 'slidesOrder',
     }),
     defineField({
+      title: 'Tour Background',
       name: 'tourBg',
       type: 'image',
       group: 'pageBgs'
     }),
     defineField({
+      title: 'Tour Background Opacity',
       name: 'tourBgOpacity',
       type: 'number',
       group: 'pageBgs',
@@ -94,31 +96,37 @@ export const siteSettings = defineType({
       validation: rule => rule.min(0).max(1).error('A value between 0 and 1 is required'),
     }),
     defineField({
+      title: 'Gallery Background',
       name: 'galleryBg',
       type: 'image',
       group: 'pageBgs'
     }),
     defineField({
+      title: 'Gallery Background Opacity',
       name: 'galleryBgOpacity',
       type: 'number',
       group: 'pageBgs'
     }),
     defineField({
+      title: 'Music Background',
       name: 'musicBg',
       type: 'image',
       group: 'pageBgs'
     }),
     defineField({
+      title: 'Music Background Opacity',
       name: 'musicBgOpacity',
       type: 'number',
       group: 'pageBgs'
     }),
     defineField({
+      title: 'Bookings Background',
       name: 'bookingsBg',
       type: 'image',
       group: 'pageBgs'
     }),
     defineField({
+      title: 'Bookings Background Opacity',
       name: 'bookingsBgOpacity',
       type: 'number',
       group: 'pageBgs'
